@@ -25,6 +25,11 @@ class ProductDetailsActivity : ComponentActivity(), ProductDetailsView {
         presenter.loadData(intent.getIntExtra(PRODUCT_ID, -1))
     }
 
+    override fun onDestroy() {
+        presenter.onDestroy()
+        super.onDestroy()
+    }
+
     override fun showLoading() {
         findViewById<FrameLayout>(R.id.loading)?.let { progressBar ->
             progressBar.isVisible = true

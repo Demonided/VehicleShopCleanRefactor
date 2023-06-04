@@ -14,6 +14,7 @@ class ProductDetailsPresenter(
     private val getProductDetailsUseCase = Creator.provideGetProductDetailsUseCase()
 
     private val handler = Handler(Looper.getMainLooper())
+    private var currentConsumeRunnable: Runnable? = null
 
     fun loadData(productId: Int?) {
         view.showLoading()
@@ -22,20 +23,39 @@ class ProductDetailsPresenter(
             productId = productId,
             consumer = object : Consumer<ProductDetails> {
                 override fun consume(data: ConsumerData<ProductDetails>) {
-                    handler.post {
-                        when (data) {
-                            is ConsumerData.Error -> {
-                                view.showError(data.message)
-                            }
+                    handler.removeCallbacksSafe(currentConsumeRunnable)
 
-                            is ConsumerData.Data -> {
-                                val productDetailsInfo = ProductDetailsMapper.map(data.value)
-                                view.showProductDetails(productDetailsInfo)
-                            }
-                        }
-                    }
+                    val consumeRunnable = getConsumeRunnable(data)
+                    currentConsumeRunnable = consumeRunnable
+
+                    handler.post(consumeRunnable)
                 }
             }
         )
+    }
+
+    private fun getConsumeRunnable(data: ConsumerData<ProductDetails>): Runnable {
+        return Runnable {
+            when (data) {
+                is ConsumerData.Error -> {
+                    view.showError(data.message)
+                }
+
+                is ConsumerData.Data -> {
+                    val productDetailsInfo = ProductDetailsMapper.map(data.value)
+                    view.showProductDetails(productDetailsInfo)
+                }
+            }
+        }
+    }
+
+    fun onDestroy() {
+        handler.removeCallbacksSafe(currentConsumeRunnable)
+    }
+
+    private fun Handler.removeCallbacksSafe(r: Runnable?) {
+        r?.let {
+            removeCallbacks(r)
+        }
     }
 }
