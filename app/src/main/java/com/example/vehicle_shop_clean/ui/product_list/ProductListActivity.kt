@@ -8,6 +8,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vehicle_shop_clean.R
+import com.example.vehicle_shop_clean.databinding.ActivityProductListBinding
 import com.example.vehicle_shop_clean.presentation.model.ProductInfo
 import com.example.vehicle_shop_clean.presentation.presenter.product_list.ProductListPresenter
 import com.example.vehicle_shop_clean.presentation.presenter.product_list.ProductListView
@@ -16,19 +17,18 @@ import com.example.vehicle_shop_clean.ui.product_details.ProductDetailsActivity
 class ProductListActivity : ComponentActivity(), ProductListView {
     private lateinit var adapter: ProductListAdapter
     private val presenter = ProductListPresenter(this)
+    private lateinit var viewBinding: ActivityProductListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_product_list)
+        viewBinding = ActivityProductListBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
         adapter = ProductListAdapter(presenter::clickProduct)
+        val layoutManger = GridLayoutManager(this, 2)
 
-        findViewById<RecyclerView>(R.id.product_list)?.let { listView ->
-            val layoutManger = GridLayoutManager(this, 2)
-
-            listView.layoutManager = layoutManger
-            listView.adapter = adapter
-        }
+        viewBinding.productList.layoutManager = layoutManger
+        viewBinding.productList.adapter = adapter
     }
 
     override fun onResume() {
@@ -38,14 +38,14 @@ class ProductListActivity : ComponentActivity(), ProductListView {
     }
 
     override fun showLoading() {
-        findViewById<RecyclerView>(R.id.product_list)?.isVisible = false
-        findViewById<ProgressBar>(R.id.loading)?.isVisible = true
+        viewBinding.productList.isVisible = false
+        viewBinding.loading.isVisible = true
     }
 
     override fun showProducts(products: List<ProductInfo>) {
         adapter.setItems(products)
-        findViewById<RecyclerView>(R.id.product_list)?.isVisible = true
-        findViewById<ProgressBar>(R.id.loading)?.isVisible = false
+        viewBinding.productList.isVisible = true
+        viewBinding.loading.isVisible = false
     }
 
     override fun showProductDetails(productId: Int) {
