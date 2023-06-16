@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.vehicle_shop_clean'
+    namespace 'com.example.vehicle_shop_clean_refactor'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.vehicle_shop_clean"
+        applicationId "com.example.vehicle_shop_clean_refactor"
         minSdk 24
         targetSdk 33
         versionCode 1
