@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.vehicle_shop_clean_refactor.databinding.ActivityProductListBinding
-import com.example.vehicle_shop_clean_refactor.ui.product_details.ProductDetailsActivity
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 
