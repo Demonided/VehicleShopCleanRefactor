@@ -1,7 +1,7 @@
 package com.example.vehicle_shop_clean_refactor.presentation.mapper
 
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Product
-import com.example.vehicle_shop_clean_refactor.presentation.model.ProductInfo
+import com.example.vehicle_shop_clean_refactor.Product
+import com.example.vehicle_shop_clean_refactor.ProductInfo
 
 object ProductMapper {
 

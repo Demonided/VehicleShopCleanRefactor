@@ -1,7 +1,7 @@
 package com.example.vehicle_shop_clean_refactor.domain.api
 
-import com.example.vehicle_shop_clean_refactor.domain.model.currency.Currency
-import com.example.vehicle_shop_clean_refactor.domain.model.currency.Rate
+import com.example.vehicle_shop_clean_refactor.Currency
+import com.example.vehicle_shop_clean_refactor.Rate
 
 interface CurrencyApi {
 

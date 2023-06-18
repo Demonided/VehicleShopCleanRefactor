@@ -5,7 +5,7 @@ import android.os.Looper
 import com.example.vehicle_shop_clean_refactor.creator.Creator
 import com.example.vehicle_shop_clean_refactor.domain.consumer.Consumer
 import com.example.vehicle_shop_clean_refactor.domain.consumer.ConsumerData
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.ProductDetails
+import com.example.vehicle_shop_clean_refactor.ProductDetails
 import com.example.vehicle_shop_clean_refactor.presentation.mapper.ProductDetailsMapper
 
 class ProductDetailsPresenter(

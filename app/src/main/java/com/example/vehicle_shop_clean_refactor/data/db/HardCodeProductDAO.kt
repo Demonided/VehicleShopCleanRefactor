@@ -2,12 +2,12 @@ package com.example.vehicle_shop_clean_refactor.data.db
 
 import com.example.vehicle_shop_clean_refactor.R
 import com.example.vehicle_shop_clean_refactor.domain.dao.ProductDAO
-import com.example.vehicle_shop_clean_refactor.domain.model.currency.Currency
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Bike
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Car
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Product
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Scooter
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.Price
+import com.example.vehicle_shop_clean_refactor.Currency
+import com.example.vehicle_shop_clean_refactor.Bike
+import com.example.vehicle_shop_clean_refactor.Car
+import com.example.vehicle_shop_clean_refactor.Product
+import com.example.vehicle_shop_clean_refactor.Scooter
+import com.example.vehicle_shop_clean_refactor.Price
 
 class HardCodeProductDAO : ProductDAO {
     override fun getProducts(): List<Product> {

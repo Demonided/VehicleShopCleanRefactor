@@ -1,6 +1,6 @@
 package com.example.vehicle_shop_clean_refactor.domain.dao
 
-import com.example.vehicle_shop_clean_refactor.domain.model.product.Product
+import com.example.vehicle_shop_clean_refactor.Product
 
 interface ProductDAO {
     fun getProducts(): List<Product>

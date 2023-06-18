@@ -1,4 +1,4 @@
-package com.example.vehicle_shop_clean_refactor.domain.model.currency
+package com.example.vehicle_shop_clean_refactor
 
 enum class Currency(val abbr: String, val symbol: Char) {
     RUBLE("RUB", '\u20BD'),

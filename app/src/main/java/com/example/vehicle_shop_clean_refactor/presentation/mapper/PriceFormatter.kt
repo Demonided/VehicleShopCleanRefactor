@@ -1,6 +1,6 @@
 package com.example.vehicle_shop_clean_refactor.presentation.mapper
 
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.Price
+import com.example.vehicle_shop_clean_refactor.Price
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 

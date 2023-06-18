@@ -1,6 +1,4 @@
-package com.example.vehicle_shop_clean_refactor.domain.model.product
-
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.Price
+package com.example.vehicle_shop_clean_refactor
 
 data class Car(
     override val id: Int,

@@ -5,7 +5,7 @@ import com.example.vehicle_shop_clean_refactor.domain.api.CurrencyApi
 import com.example.vehicle_shop_clean_refactor.domain.consumer.Consumer
 import com.example.vehicle_shop_clean_refactor.domain.consumer.ConsumerData
 import com.example.vehicle_shop_clean_refactor.domain.dao.ProductDAO
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.ProductDetails
+import com.example.vehicle_shop_clean_refactor.ProductDetails
 import java.util.concurrent.Executors
 
 class GetProductDetailsUseCase(

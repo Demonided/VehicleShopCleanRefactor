@@ -1,4 +1,4 @@
-package com.example.vehicle_shop_clean_refactor.domain.model.product
+package com.example.vehicle_shop_clean_refactor
 
 interface VehicleWithEngine {
     val power: Int

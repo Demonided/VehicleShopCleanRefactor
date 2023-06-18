@@ -1,4 +1,4 @@
-package com.example.vehicle_shop_clean_refactor.presentation.model
+package com.example.vehicle_shop_clean_refactor
 
 data class ProductInfo(
     val id: Int,

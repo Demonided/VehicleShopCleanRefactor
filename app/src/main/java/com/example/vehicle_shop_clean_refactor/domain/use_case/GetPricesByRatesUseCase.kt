@@ -1,7 +1,7 @@
 package com.example.vehicle_shop_clean_refactor.domain.use_case
 
-import com.example.vehicle_shop_clean_refactor.domain.model.currency.Rate
-import com.example.vehicle_shop_clean_refactor.domain.model.product_details.Price
+import com.example.vehicle_shop_clean_refactor.Rate
+import com.example.vehicle_shop_clean_refactor.Price
 
 object GetPricesByRatesUseCase {
 

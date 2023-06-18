@@ -1,10 +1,8 @@
-package com.example.vehicle_shop_clean_refactor.ui.product_list
+package com.example.vehicle_shop_clean_refactor
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vehicle_shop_clean_refactor.R
-import com.example.vehicle_shop_clean_refactor.presentation.model.ProductInfo
 
 class ProductListAdapter(
     private val onProductClick: (productId: Int) -> Unit

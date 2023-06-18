@@ -1,6 +1,6 @@
 package com.example.vehicle_shop_clean_refactor.presentation.presenter.product_list
 
-import com.example.vehicle_shop_clean_refactor.presentation.model.ProductInfo
+import com.example.vehicle_shop_clean_refactor.ProductInfo
 
 interface ProductListView {
 
